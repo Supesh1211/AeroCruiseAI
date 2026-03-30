@@ -1,5 +1,0 @@
-com/aerocruise/backend/repository/UserRepository.class
-com/aerocruise/backend/BackendApplication.class
-com/aerocruise/backend/entity/User.class
-com/aerocruise/backend/service/UserService.class
-com/aerocruise/backend/controller/AuthController.class
