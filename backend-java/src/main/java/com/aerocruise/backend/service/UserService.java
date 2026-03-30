@@ -12,6 +12,9 @@ public class UserService {
     @Autowired
     private UserRepository repo;
 
+    @Autowired
+    private JwtService jwtService;   // ✅ ADD THIS
+
     public User register(User user) {
         return repo.save(user);
     }
@@ -20,7 +23,7 @@ public class UserService {
         User user = repo.findByEmail(email).orElse(null);
 
         if (user != null && user.getPassword().equals(password)) {
-            return "Login Successful";
+            return jwtService.generateToken(email);  // 🔥 RETURN TOKEN
         }
         return "Invalid Credentials";
     }
