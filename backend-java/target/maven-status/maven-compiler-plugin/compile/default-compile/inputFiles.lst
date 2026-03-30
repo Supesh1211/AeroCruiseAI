@@ -1,0 +1,5 @@
+/Users/supesh/AeroCruiseAI/backend-java/src/main/java/com/aerocruise/backend/BackendApplication.java
+/Users/supesh/AeroCruiseAI/backend-java/src/main/java/com/aerocruise/backend/controller/AuthController.java
+/Users/supesh/AeroCruiseAI/backend-java/src/main/java/com/aerocruise/backend/entity/User.java
+/Users/supesh/AeroCruiseAI/backend-java/src/main/java/com/aerocruise/backend/repository/UserRepository.java
+/Users/supesh/AeroCruiseAI/backend-java/src/main/java/com/aerocruise/backend/service/UserService.java
