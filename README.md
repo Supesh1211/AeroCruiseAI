@@ -1,27 +1,27 @@
-# ✈️ AeroCruise AI
+# ✈️ AeroCruise Backend System
 
-### Intelligent Flight Booking & Management System
+### Flight Booking & Management System (Spring Boot)
 
 ---
 
 ## 🚀 Project Overview
 
-**AeroCruise AI** is a smart flight booking and management system that combines **Java backend development** with **Python-based AI services**.
-The system allows users to search flights, book tickets, and get intelligent insights such as **price prediction and smart recommendations**.
+**AeroCruise** is a backend system for flight booking built using **Spring Boot**.
+It allows users to register, search flights, and book tickets with secure authentication.
 
-This project follows a **microservices architecture**, where different modules communicate via REST APIs.
+The system follows a clean **layered architecture**:
+Controller → Service → Repository → Database.
 
 ---
 
-## 🧠 Key Features
+## 🧠 Features
 
-* 🔐 User Authentication (Login/Register)
-* ✈️ Flight Search & Filtering
+* 🔐 User Authentication (JWT)
+* ✈️ Flight Management (Add, Search, View)
 * 🎟️ Ticket Booking System
-* 💳 Payment Management
-* 🤖 AI-Based Price Prediction
-* 📊 Smart Flight Recommendations
-* 🛠️ Admin Panel for Flight Management
+* 📊 Booking History
+* 💾 MySQL Database Integration
+* 🔒 Secure APIs
 
 ---
 
@@ -31,9 +31,7 @@ This project follows a **microservices architecture**, where different modules c
 AeroCruiseAI/
 │
 ├── backend-java/     # Spring Boot Backend
-├── ai-python/        # AI/ML Services (Flask/FastAPI)
-├── frontend/         # (Optional - Future Scope)
-├── docs/             # Documentation (ER Diagram, PDF, etc.)
+├── docs/             # Documentation
 └── README.md
 ```
 
@@ -41,124 +39,71 @@ AeroCruiseAI/
 
 ## ⚙️ Tech Stack
 
-### Backend:
-
 * Java
 * Spring Boot
-* REST APIs
-
-### AI Module:
-
-* Python
-* Flask / FastAPI
-* Pandas, NumPy, Scikit-learn
-
-### Database:
-
-* MySQL / PostgreSQL
-
-### Tools:
-
-* GitHub (Version Control)
-* Postman (API Testing)
+* Spring Data JPA
+* MySQL
+* JWT Authentication
+* Maven
 
 ---
 
-## 🔄 System Architecture
+## 🔄 Architecture
 
-```
-User → Frontend → Java Backend → Python AI Service → Database
-```
-
-* Java handles core business logic
-* Python handles AI predictions
-* Communication via REST APIs
+Client → Controller → Service → Repository → MySQL
 
 ---
 
-## 🌿 Git Workflow
+## 📡 API Endpoints
 
-* `main` → Stable production-ready code
-* `dev` → Development branch
-* `feature-auth` → Authentication module
-* `feature-booking` → Booking system
-* `feature-ai` → AI module
+### 🔐 Auth
 
----
+* POST `/auth/register`
+* POST `/auth/login`
 
-## 👨‍💻 Team Responsibilities
+### ✈️ Flights
 
-### Java Developer:
+* POST `/flights/add`
+* GET `/flights/all`
+* GET `/flights/search`
 
-* Backend APIs
-* Authentication
-* Booking system
+### 🎟️ Booking
 
-### Python Developer:
-
-* AI model development
-* Price prediction APIs
-* Recommendation system
+* POST `/booking/book`
+* GET `/booking/history`
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Run Project
 
-### 1. Clone the Repository
-
-```
-git clone https://github.com/Supesh1211/AeroCruiseAI.git
-cd AeroCruiseAI
+```bash
+mvn clean spring-boot:run
 ```
 
 ---
 
-### 2. Backend Setup (Java)
+## 🧪 Testing
 
-* Go to `backend-java/`
-* Create Spring Boot project
-* Run application
+Use Postman to:
 
----
-
-### 3. AI Setup (Python)
-
-* Go to `ai-python/`
-* Install dependencies
-
-```
-pip install -r requirements.txt
-```
-
-* Run server
-
-```
-python app.py
-```
+* Register user
+* Login → get JWT token
+* Add flight
+* Book flight
+* Check history
 
 ---
 
-## 📊 Future Enhancements
+## 📊 Future Improvements
 
-* 🌐 Real-time airline API integration
-* 💰 Payment gateway integration
-* 📱 Mobile application
-* 🤖 Advanced AI models (Deep Learning)
-
----
-
-## 📌 Conclusion
-
-AeroCruise AI demonstrates how combining **backend development with AI** can enhance traditional systems.
-It provides a scalable and intelligent solution for modern flight booking needs.
+* Payment integration
+* Frontend (React)
+* Admin panel
+* Deployment
 
 ---
 
-## 📧 Contact
+## 👨‍💻 Author
 
-**Supesh Chavhan**
+Supesh Chavhan
 GitHub: https://github.com/Supesh1211
-
----
-
-⭐ If you like this project, don’t forget to star the repository!
