@@ -102,7 +102,6 @@ Use Postman to:
 * Deployment
 
 ---
-
 ## 👨‍💻 Author
 
 Supesh Chavhan
